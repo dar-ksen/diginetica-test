@@ -33,7 +33,7 @@ function setText(message) {
  setText('Сообщение');
 Опишите, почему получился такой результат.
 
-Ответ: Сообщение. Самое последнее присвоение при вызове ункции
+Ответ: Сообщение. Самое последнее присвоение при вызове функции
 
 
 7. 
@@ -54,7 +54,8 @@ function track(t){
 Написать функцию для получения список всех артикулов товаров в консоли браузера на странице https://groupprice.ru/categories/jenskaya-odejda?referer_from=main_catalog
 Ответ:
 const getVendorCode = () => [...document.querySelectorAll('.product-item .name')].map(el => el.textContent);
-Вопрос что считать за артикул товара, по такому же принципу можно вернуть data-id например
+Вопрос что считать за артикул товара, по такому же принципу можно вернуть например data-id
+
 9. 
 Написать функцию для получения всех характеристики товара в консоли браузера в виде объекта в формате attributeName: value на странице https://nir-vanna.ru/product/smesitel-bravat-art-f175109c-dlya-rakoviny/
 
