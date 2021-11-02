@@ -1,0 +1,19 @@
+.container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: $tablet-max-width) {
+  .container {
+    margin: 0;
+    padding: 0 27px;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .container {
+    padding: 0 15px;
+  }
+}

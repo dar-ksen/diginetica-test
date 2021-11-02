@@ -1,0 +1,35 @@
+.sorting-mark {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-right: 15px;
+    transition: color 0.3s;
+    position: relative;
+    font-family: $openSans;
+    font-size: 14px;
+    line-height: 19px;
+    color: #5375b7;
+
+    &::after {
+      transition: opacity 0.3s;
+      position: absolute;
+      content: "";
+      height: 1px;
+      background-color: #f1bd45;
+      left: 0;
+      right: 0;
+      bottom: 3px;
+      opacity: 0;
+    }
+
+    &.active,
+    &:focus,
+    &:hover {
+      color: #333333;
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}

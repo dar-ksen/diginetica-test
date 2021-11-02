@@ -1,0 +1,10 @@
+.header {
+  background-color: $text-color-base;
+  padding: 43px 0 41px;
+
+  &__text {
+    color: white;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

@@ -1,0 +1,48 @@
+// исправление стилей модуля noUi
+.noUi-target {
+  border-radius: 30px;
+  border: none;
+}
+
+.noUi-horizontal {
+  height: 7px;
+}
+
+html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
+  right: -7px;
+}
+
+.noUi-connects {
+  background-color: #000000;
+  border-radius: 30px;
+}
+
+.noUi-connect {
+  background-color: #000000;
+}
+
+.noUi-handle {
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+
+  transition: transform 0.3s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.noUi-horizontal .noUi-handle {
+  box-sizing: content-box;
+  top: -6px;
+  height: 14px;
+  width: 14px;
+  border: 2px solid #000000;
+}

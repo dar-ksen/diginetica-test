@@ -1,0 +1,77 @@
+.filters {
+  flex: 0 0 290px;
+  max-width: 290px;
+  margin-right: 42px;
+
+  &__section:not(:last-child) {
+    margin-bottom: 46px;
+  }
+
+  &__section-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__section-title {
+    margin: 0 15px 11px 0;
+  }
+  &__section-clear-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-family: $arial;
+    font-size: 10px;
+    line-height: 11px;
+    text-align: right;
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: #8b8b8b;
+    opacity: 0.5;
+  }
+
+  @media (max-width: 1024px) {
+    flex: 1 1 100%;
+    max-width: none;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-between;
+    &__section {
+      flex: 0 0 calc(100% / 3 - 20px);
+    }
+  }
+}
+
+.filters__price-fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0 2px;
+
+  input {
+    font: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 13px;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    height: 40px;
+    width: 110px;
+  }
+  span {
+    font-size: 12px;
+    color: #000000;
+    opacity: 0.5;
+  }
+}
+
+.filters__price-min {
+  flex: 0 1 108px;
+  position: relative;
+}
+
+.filters__price-max {
+  flex: 0 1 98px;
+  position: relative;
+}

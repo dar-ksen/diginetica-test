@@ -1,0 +1,54 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    display: inline-block;
+    padding: 0 1px;
+    margin-left: 12px;
+    line-height: 40px;
+    opacity: 0.5;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    &--disable {
+    }
+
+    &--active {
+      opacity: 1;
+    }
+
+    &--arrow {
+      font-size: 30px;
+      margin-left: 5px;
+      line-height: 0;
+    }
+
+    &--bullet {
+      margin-left: -3px;
+    }
+
+    &--bullet + li {
+      margin-left: -3px;
+    }
+
+    :hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.sorting {
+  display: flex;
+  align-items: center;
+  font-family: $openSans;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+
+  &__wrapper {
+    display: flex;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  &__quantity-selector {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    margin: 0 10px 0 0;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+  }
+}

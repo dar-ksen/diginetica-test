@@ -1,0 +1,20 @@
+.categories {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  &__link {
+    font-size: 14px;
+    line-height: 30px;
+    color: #5375b7;
+    span {
+      color: #8b8b8b;
+      opacity: 0.5;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+}

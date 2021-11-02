@@ -1,0 +1,30 @@
+// Глобальные стили
+@import "./vendor/normalize";
+@import "./global/variables";
+@import "./global/fonts";
+@import "./global/common";
+@import "./global/container";
+
+@import "./global/nouislider.min.scss";
+// Общие стили
+
+@import "./blocks/btn.scss";
+@import "./blocks/title.scss";
+@import "./blocks/header.scss";
+@import "./blocks/search-bar.scss";
+@import "./blocks/search-result.scss";
+@import "./blocks/search-item.scss";
+@import "./blocks/catalog-wrap.scss";
+@import "./blocks/filters.scss";
+@import "./blocks/categories.scss";
+@import "./blocks/checkbox-group.scss";
+@import "./blocks/form.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/sorting.scss";
+@import "./blocks/sorting-mark.scss";
+@import "./blocks/selector.scss";
+@import "./blocks/clarification.scss";
+@import "./blocks/card-list.scss";
+@import "./blocks/card-item.scss";
+@import "./blocks/pagination.scss";
+@import "./blocks/price-slider.scss";
