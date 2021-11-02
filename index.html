@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Тестовое задание">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Тестовое задание</title>
+
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div style="display:none;">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-search" viewBox="0 0 17 17">
+<path d="M7.45614 14.5819C3.35526 14.5819 0 11.2845 0 7.25431C0 3.29741 3.35526 0 7.45614 0C11.557 0 14.9123 3.29741 14.9123 7.32759C14.8377 11.3578 11.557 14.5819 7.45614 14.5819ZM7.45614 1.46552C4.17544 1.46552 1.49123 4.10345 1.49123 7.32759C1.49123 10.5517 4.17544 13.1897 7.45614 13.1897C10.7368 13.1897 13.4211 10.5517 13.4211 7.32759C13.3465 4.10345 10.7368 1.46552 7.45614 1.46552Z" fill="black"></path>
+<path d="M3.28077 7.3276H2.53516C2.53516 4.68967 4.772 2.49139 7.45621 2.49139V3.22415C5.14481 3.22415 3.28077 5.05605 3.28077 7.3276Z" fill="black"></path>
+<path d="M16.2543 17C16.0306 17 15.8815 16.9267 15.7324 16.7802L11.5569 12.6767C11.2587 12.3836 11.2587 11.944 11.5569 11.6509C11.8552 11.3578 12.3025 11.3578 12.6008 11.6509L16.7762 15.7543C17.0745 16.0474 17.0745 16.4871 16.7762 16.7802C16.7017 16.9267 16.478 17 16.2543 17Z" fill="black"></path>
+</symbol></svg>
+  </div>
+  <header class="header">
+    <div class="container">
+      <p class="header__text">Шапка сайта</p>
+    </div>
+  </header>
+  <main class="container">
+    <div class="search-bar">
+      <form class="search-bar__form">
+        <input type="text" placeholder="Запрос пользователя" class="search-bar__input">
+        <svg class="search-bar__icon" width="14" height="14">
+          <use xlink:href="#icon-search"></use>
+        </svg>
+        <button class="btn btn--large" type="submit">Найти</button>
+      </form>
+      <button class="btn btn--white" type="submit">Закрыть</button>
+    </div>
+
+    <section class="search-result">
+      <div class="search-result__header">
+        <h2 class="search-result__title title">Результаты по запросу</h2>
+        <div class="search-result__query">Показаны результаты для “Запрос пользователя”. Вы искали “Зопрос
+          пользователя”.</div>
+      </div>
+      <div class="search-result__list-wrap">
+        <div class="search-result__list-scroll">
+          <div class="search-result__list">
+            <div class="search-item">
+              <div class="search-item__img">
+                <img src="https://via.placeholder.com/60" alt="">
+              </div>
+              <div class="search-item__description">
+                <h3 class="search-item__title">Название категории</h3>
+                <p class="search-item__counter">134 товара</p>
+              </div>
+            </div>
+            <div class="search-item">
+              <div class="search-item__img">
+                <img src="https://via.placeholder.com/60" alt="">
+              </div>
+              <div class="search-item__description">
+                <h3 class="search-item__title">Название категории</h3>
+                <p class="search-item__counter">134 товара</p>
+              </div>
+            </div>
+            <div class="search-item">
+              <div class="search-item__img">
+                <img src="https://via.placeholder.com/60" alt="">
+              </div>
+              <div class="search-item__description">
+                <h3 class="search-item__title">Название категории</h3>
+                <p class="search-item__counter">134 товара</p>
+              </div>
+            </div>
+            <div class="search-item">
+              <div class="search-item__img">
+                <img src="https://via.placeholder.com/60" alt="">
+              </div>
+              <div class="search-item__description">
+                <h3 class="search-item__title">Название категории</h3>
+                <p class="search-item__counter">134 товара</p>
+              </div>
+            </div>
+            <div class="search-item">
+              <div class="search-item__img">
+                <img src="https://via.placeholder.com/60" alt="">
+              </div>
+              <div class="search-item__description">
+                <h3 class="search-item__title">Название категории</h3>
+                <p class="search-item__counter">134 товара</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-wrap">
+      <aside class="filters">
+        <div class="filters__section">
+          <div class="filters__section-header">
+            <p class="filters__section-title">Все категории</p>
+          </div>
+          <ul class="categories">
+            <li class="categories__item">
+              <a class="categories__link" href="#">
+                Категория в которой нашли что-то <span>(ххх)</span>
+              </a>
+            </li>
+            <li class="categories__item">
+              <a class="categories__link" href="#">
+                Категория в которой нашли что-то <span>(ххх)</span>
+              </a>
+            </li>
+            <li class="categories__item">
+              <a class="categories__link" href="#">
+                Категория в которой нашли что-то <span>(ххх)</span>
+              </a>
+            </li>
+            <li class="categories__item">
+              <a class="categories__link" href="#">
+                Категория в которой нашли что-то <span>(ххх)</span>
+              </a>
+            </li>
+            <li class="categories__item">
+              <a class="categories__link" href="#">
+                Категория в которой нашли что-то <span>(ххх)</span>
+              </a>
+            </li>
+            <li class="categories__item">
+              <a class="categories__link" href="#">
+                Категория в которой нашли что-то <span>(ххх)</span>
+              </a>
+            </li>
+            <li class="categories__item">
+              <a class="categories__link" href="#">
+                Категория в которой нашли что-то <span>(ххх)</span>
+              </a>
+            </li>
+            <li class="categories__item">
+              <a class="categories__link" href="#">
+                Категория в которой нашли что-то <span>(ххх)</span>
+              </a>
+            </li>
+            <li class="categories__item">
+              <a class="categories__link" href="#">
+                Ещё 10 категорий...
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="filters__section filters__section--price-slider">
+          <div class="filters__section-header">
+            <p class="filters__section-title">Цена, валюта</p>
+          </div>
+
+          <div class="filters__price-slider">
+            <div class="filters__price-fields">
+              <span>от</span>
+              <input id="input-min" type="text" name="price-min">
+              <span>до</span>
+              <input id="input-max" type="text" name="price-max">
+              <span>Р</span>
+            </div>
+            <div id="steps-slider"></div>
+          </div>
+        </div>
+
+        <div class="filters__section">
+
+          <div class="filters__section-header">
+            <p class="filters__section-title">Бренды</p>
+            <button class="filters__section-clear-btn" type="button">Очистить</button>
+          </div>
+
+          <div class="form">
+            <div class="form__checkbox-group">
+              <input class="form__checkbox-input visually-hidden" type="checkbox" name="white" id="brand-1">
+              <label class="form__checkbox-desc" for="brand-1">Бренд <span>(xx)</span></label>
+            </div>
+
+            <div class="form__checkbox-group">
+              <input class="form__checkbox-input visually-hidden" type="checkbox" name="white" id="brand-2">
+              <label class="form__checkbox-desc" for="brand-2">Бренд <span>(xx)</span></label>
+            </div>
+
+            <div class="form__checkbox-group">
+              <input class="form__checkbox-input visually-hidden" type="checkbox" name="white" id="brand-3">
+              <label class="form__checkbox-desc" for="brand-3">Бренд <span>(xxx)</span></label>
+            </div>
+
+          </div>
+        </div>
+      </aside>
+
+      <section class="catalog">
+        <h2 class="visually-hidden">Список товаров</h2>
+        <div class="sorting">
+          <div class="sorting__wrapper">
+            <h3 class="sorting__title">Сортировать по:</h3>
+            <div class="sorting-mark">
+              <a class="sorting-mark__item active" href="#">популярности</a>
+              <a class="sorting-mark__item" href="#">сначала дешёвые</a>
+              <a class="sorting-mark__item" href="#">сначала дорогие</a>
+            </div>
+          </div>
+
+          <div class="sorting__quantity-selector">
+            <div class="selector">
+              <label for="feeling">Показывать по</label>
+
+              <select id="feeling">
+                <option default="">24</option>
+                <option value="21">18</option>
+                <option value="24">21</option>
+                <option value="27">27</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+
+        <ul class="clarification">
+          <li>Уточнение</li>
+          <li>Уточнение</li>
+          <li>Уточнение</li>
+          <li>Уточнение</li>
+        </ul>
+        <ul class="card-list">
+
+          <li class="card-item">
+            <div class="card-item__img">
+              <img src="https://via.placeholder.com/260x260" alt="">
+            </div>
+            <p class="card-item__title">Наименование товара, которое не более 2 строк.
+            </p>
+            <div class="card-item__price">
+              <span class="new-price">XX XXX , </span>
+              <span class="old-price">XX XXX </span>
+            </div>
+            <button class="btn btn--primary">Кнопка</button>
+          </li>
+          <li class="card-item">
+            <div class="card-item__img">
+              <img src="https://via.placeholder.com/260x260" alt="">
+            </div>
+            <p class="card-item__title">Наименование товара, которое не более 2 строк.
+            </p>
+            <div class="card-item__price">
+              <span class="new-price">XX XXX , </span>
+              <span class="old-price">XX XXX </span>
+            </div>
+            <button class="btn btn--primary">Кнопка</button>
+          </li>
+          <li class="card-item">
+            <div class="card-item__img">
+              <img src="https://via.placeholder.com/260x260" alt="">
+            </div>
+            <p class="card-item__title">Наименование товара, которое не более 2 строк.
+            </p>
+            <div class="card-item__price">
+              <span class="new-price">XX XXX , </span>
+              <span class="old-price">XX XXX </span>
+            </div>
+            <button class="btn btn--primary">Кнопка</button>
+          </li>
+          <li class="card-item">
+            <div class="card-item__img">
+              <img src="https://via.placeholder.com/260x260" alt="">
+            </div>
+            <p class="card-item__title">Наименование товара, которое не более 2 строк.
+            </p>
+            <div class="card-item__price">
+              <span class="new-price">XX XXX , </span>
+              <span class="old-price">XX XXX </span>
+            </div>
+            <button class="btn btn--primary">Кнопка</button>
+          </li>
+          <li class="card-item">
+            <div class="card-item__img">
+              <img src="https://via.placeholder.com/260x260" alt="">
+            </div>
+            <p class="card-item__title">Наименование товара, которое не более 2 строк.
+            </p>
+            <div class="card-item__price">
+              <span class="new-price">XX XXX , </span>
+              <span class="old-price">XX XXX </span>
+            </div>
+            <button class="btn btn--primary">Кнопка</button>
+          </li>
+          <li class="card-item">
+            <div class="card-item__img">
+              <img src="https://via.placeholder.com/260x260" alt="">
+            </div>
+            <p class="card-item__title">Наименование товара, которое не более 2 строк.
+            </p>
+            <div class="card-item__price">
+              <span class="new-price">XX XXX , </span>
+              <span class="old-price">XX XXX </span>
+            </div>
+            <button class="btn btn--primary">Кнопка</button>
+          </li>
+
+        </ul>
+
+        <ul class="pagination">
+          <li class="pagination__item pagination__item--disable"><button type="button">2</button> </li>
+          <li class="pagination__item pagination__item--active"><button type="button">3</button> </li>
+          <li class="pagination__item pagination__item--active pagination__item--bullet"><button type="button">...</button> </li>
+          <li class="pagination__item"><button type="button">13</button> </li>
+          <li class="pagination__item pagination__item--active pagination__item--arrow"><button type="button">&rsaquo;</button></li>
+        </ul>
+
+      </section>
+
+    </section>
+
+
+  </main>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
