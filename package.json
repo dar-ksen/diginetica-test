@@ -1,7 +1,7 @@
 {
-  "name": "gulp-template",
+  "name": "diginetica-test",
   "version": "1.0.0",
-  "description": "gulp-template",
+  "description": "diginetica-test",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.8.x",
