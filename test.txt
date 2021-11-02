@@ -1,0 +1,77 @@
+1. 
+Каким будет результат такого сравнения на языке JavaScript 1 === '1'. Почему был получен такой результат?
+Ответ false. т.к === - строгое равенство, а сравниваются строка и число.
+
+2. 
+Каким будет результат следующей операции на языке JavaScript: [1, 2, 3] + [4, 5, 6]. Почему был получен такой результат?
+Ответ 1,2,34,5,6 . т.к массивы нельзя сложить, то они сначала переводятся в строки, и потом соединяются как строки 
+
+3. 
+Дано выражение:
+var a = {b: 1};
+var b = a;
+b.b = 2;
+console.log(a);
+Что будет выведено в консоли? Почему был получен такой результат?
+
+Ответ 2. т.к объекты это ссылка на определенную область в памяти и если приравнять два объекта то они буду ссылаться на одну область памяти.
+
+4. 
+Написать регулярное выражение, совпадающее с числом с плавающей точкой с точностью до 3 знака после запятой.
+Ответ: ^[0-9]*[.,][0-9]+$
+
+5. 
+Написать регулярное выражение, по которому мэтчится url. Объяснить, как оно работает.
+Ответ: /http:|https:/ проверяем на вхождение в строку c помощью метода .match(/http:|https:/). Если возвращается не null? значит url 
+
+6.
+Каким будет значение переменной text после выполнения данного JavaScript кода? 
+function setText(message) { 
+ text = message;
+ }
+ var text = 'Текст';
+ setText('Сообщение');
+Опишите, почему получился такой результат.
+
+Ответ: Сообщение. Самое последнее присвоение при вызове ункции
+
+
+7. 
+На сайте есть ссылка, ведущая на промо страницу: <a href="http://example.com/">promo</a>. Нужно доработать html-код ссылки так, чтобы при клике на ссылку отправлялся запрос для трекинга клика  https://httpbin.org/status/200 и происходил переход на промо страницу.
+Ответ:
+создаем функцию
+function track(t){
+  fetch('https://httpbin.org/status/200').then(
+    s=>location.replace(t.href),
+    err=>console.error(err)
+ );
+  return false;
+}
+и 
+<a href='#' onclick="track(this)">GO</a>
+
+8. 
+Написать функцию для получения список всех артикулов товаров в консоли браузера на странице https://groupprice.ru/categories/jenskaya-odejda?referer_from=main_catalog
+Ответ:
+const getVendorCode = () => [...document.querySelectorAll('.product-item .name')].map(el => el.textContent);
+Вопрос что считать за артикул товара, по такому же принципу можно вернуть data-id например
+9. 
+Написать функцию для получения всех характеристики товара в консоли браузера в виде объекта в формате attributeName: value на странице https://nir-vanna.ru/product/smesitel-bravat-art-f175109c-dlya-rakoviny/
+
+const returnFeatures = () => {
+  const nodeList = [
+    ...document.querySelectorAll(".tab-pane-product-parameter-item"),
+  ].map((el) => {
+    const key = el
+      .querySelector(".parameter-name")
+      .textContent.replace(/\r?\n?/g, "")
+      .trim();
+    const value = el.querySelector(".parameter-value").textContent;
+    return { key: key, value: value };
+  });
+
+  return nodeList.reduce((sum, el) => {
+    sum[el.key] = el.value;
+    return sum;
+  }, {});
+};
