@@ -683,15 +683,17 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 32px 0; }
   .search-bar__form {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
     margin-right: 1rem; }
     .search-bar__form::before {
       position: absolute;
@@ -716,6 +718,12 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     position: absolute;
     left: 16px;
     top: calc((100% - 16px) / 2); }
+  @media (max-width: 767px) {
+    .search-bar__form {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 100%;
+              flex: 1 1 100%;
+      margin-bottom: 15px; } }
 
 .search-result {
   padding-bottom: 30px; }
@@ -738,9 +746,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     font-family: "OpenSans", "Arial", sans-serif;
     color: #8b8b8b; }
   .search-result__list-wrap {
-    position: relative;
-    overflow-x: hidden;
-    padding-bottom: 10px; }
+    position: relative; }
     .search-result__list-wrap::after {
       position: absolute;
       content: "";
@@ -750,6 +756,9 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
       width: 143px;
       background: -webkit-gradient(linear, right top, left top, from(#ffffff), to(rgba(255, 255, 255, 0)));
       background: linear-gradient(-90deg, #ffffff, rgba(255, 255, 255, 0)); }
+  .search-result__list-scroll {
+    overflow-x: hidden;
+    padding-bottom: 10px; }
   .search-result__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -757,7 +766,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap; }
   @media (max-width: 1024px) {
-    .search-result__list-wrap {
+    .search-result__list-scroll {
       overflow-x: auto; } }
 
 .search-item {
@@ -812,7 +821,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     .catalog-wrap {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -851,8 +860,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     cursor: pointer;
     color: #8b8b8b;
     opacity: 0.5; }
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     .filters {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       -webkit-box-flex: 1;
           -ms-flex: 1 1 100%;
               flex: 1 1 100%;
@@ -868,6 +879,18 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
         -webkit-box-flex: 0;
             -ms-flex: 0 0 calc(100% / 3 - 20px);
                 flex: 0 0 calc(100% / 3 - 20px); } }
+  @media (max-width: 950px) {
+    .filters__section {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 calc(100% / 2 - 20px);
+              flex: 0 0 calc(100% / 2 - 20px); }
+      .filters__section--price-slider {
+        -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+                order: 3;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%; } }
 
 .filters__price-fields {
   display: -webkit-box;
@@ -1099,12 +1122,23 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   transition: 0.2s box-shadow ease-in;
   transition: 0.2s box-shadow ease-in, 0.2s -webkit-box-shadow ease-in; }
   .card-item__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     background-color: #c4c4c4;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
-    height: 260px;
+    height: auto;
     margin-bottom: 10px;
     border-radius: 3px;
     overflow: hidden; }
+    .card-item__img img {
+      width: 100%; }
   .card-item__title {
     margin-bottom: 20px;
     font-family: Arial;

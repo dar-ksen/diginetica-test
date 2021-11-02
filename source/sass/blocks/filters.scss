@@ -29,7 +29,8 @@
     opacity: 0.5;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: $tablet-max-width) {
+    flex-wrap: wrap;
     flex: 1 1 100%;
     max-width: none;
     margin-right: 0;
@@ -37,6 +38,15 @@
     justify-content: space-between;
     &__section {
       flex: 0 0 calc(100% / 3 - 20px);
+    }
+  }
+  @media (max-width: 950px) {
+    &__section {
+      flex: 0 0 calc(100% / 2 - 20px);
+      &--price-slider {
+        order: 3;
+        flex: 0 0 100%;
+      }
     }
   }
 }

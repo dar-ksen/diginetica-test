@@ -20,8 +20,7 @@
 
   &__list-wrap {
     position: relative;
-    overflow-x: hidden;
-    padding-bottom: 10px;
+
     &::after {
       position: absolute;
       content: "";
@@ -33,12 +32,17 @@
     }
   }
 
+  &__list-scroll {
+    overflow-x: hidden;
+    padding-bottom: 10px;
+  }
+
   &__list {
     display: flex;
     flex-wrap: nowrap;
   }
   @media (max-width: 1024px) {
-    &__list-wrap {
+    &__list-scroll {
       overflow-x: auto;
     }
   }

@@ -1,7 +1,7 @@
 .catalog-wrap {
   display: flex;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $tablet-max-width) {
     flex-direction: column;
   }
 }
